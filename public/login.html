@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela de Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(https://www.papeldeparede.etc.br/fotos/wp-content/uploads/sao-paulo--simples_7521_1024x768-370x297.jpg);
+        margin: 150px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    input {
+        width: calc(100% - 22px); /* Ajustar o tamanho para incluir a largura do padding */
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: #fff;
+       
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Transição suave de cor ao passar o mouse */
+    }
+    button:hover {
+        background-color: #000000; /* Cor de fundo alterada ao passar o mouse */
+    }
+</style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+      
+        if (username === 'adm' && password === '1234') {
+            alert('Login bem sucedido!');
+            window.location.href = 'index2.html'; 
+   
+        } else {
+            alert('Credenciais inválidas. Tente novamente.');
+        }
+    }
+</script>
+
+</body>
+</html>
